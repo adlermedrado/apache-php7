@@ -8,11 +8,11 @@ RUN apt-get -y update
 RUN locale-gen en_US.UTF-8
 RUN export LANG=en_US.UTF-8
 RUN apt-get install -y apache2 libapache2-mod-php7.1 php7.1 \
-    && php-xdebug php7.1-mbstring sqlite3 php7.1-mysql \
-    && php-apcu php-apcu-bc php-imagick php-memcached php-pear curl imagemagick php7.1-dev \
-    && php7.1-phpdbg php7.1-gd php7.1-json php7.1-curl php7.1-sqlite3 php7.1-intl apache2 vim \
-    && git-core wget libsasl2-dev libssl-dev libsslcommon2-dev libcurl4-openssl-dev autoconf g++ \
-    && php7.1-bcmath
+&& php-xdebug php7.1-mbstring sqlite3 php7.1-mysql \
+&& php-apcu php-apcu-bc php-imagick php-memcached php-pear curl imagemagick php7.1-dev \
+&& php7.1-phpdbg php7.1-gd php7.1-json php7.1-curl php7.1-sqlite3 php7.1-intl apache2 vim \
+&& git-core wget libsasl2-dev libssl-dev libsslcommon2-dev libcurl4-openssl-dev autoconf g++ \
+&& php7.1-bcmath
 
 RUN make openssl libssl-dev libcurl4-openssl-dev pkg-config libsasl2-dev libpcre3-dev
 
